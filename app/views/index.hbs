@@ -1,0 +1,35 @@
+<main class="container text-center mt-5 pt-5">
+    <p class="text-secondary fs-1 mt-1">{{{title}}}</p>
+    <div class="mt-5">
+        {{#if session.isLoggedIn}}
+            <section id="dashboard" class="pt-3">
+                <div id="content" class="row pt-2">
+                    <div class="col-12 col-lg-5 border border-4 border-warning-subtle rounded-5">
+                        <a href="api/user" class="text-decoration-none">
+                            <div class="card dashboard-card rounded-4 border-0 my-2">
+                                <img src="./images/User.png" alt="" class="card-img p-1">
+                                <div class="card-body">
+                                    <p class="card-title text-secondary fw-bold fs-3">Usuarios</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-lg-5 offset-2 border border-4 border-warning-subtle rounded-5">
+                        <a href="/api/bootcamp" class="text-decoration-none">
+                            <div class="card dashboard-card rounded-4 border-0 my-2">
+                                <img src="./images/Bootcamp.png" alt="" class="card-img p-1">
+                                <div class="card-body">
+                                    <p class="card-title text-secondary fw-bold fs-3">Bootcamps</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        {{else}}
+        <div class="mt-5 pt-5">
+            <p class="fs-3 text-secondary mt-3 pt-5">Por favor inicie sesión para ver el contenido</p>
+        </div>
+        {{/if}}
+    </div>
+</main>

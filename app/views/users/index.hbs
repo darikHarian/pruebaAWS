@@ -1,0 +1,9 @@
+<main class="text-center mt-5 pt-5">
+    {{#if session.isLoggedIn}}
+        <p class="fs-2 fw-bold">Users</p>
+    {{else}}
+        <div class="mt-5 pt-5">
+            <p class="fs-3 text-secondary mt-3 pt-5">Por favor inicie sesión para ver el contenido</p>
+        </div>
+    {{/if}}
+</main>
